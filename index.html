@@ -1,1 +1,237 @@
-Hello World
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i" rel="stylesheet">
+		
+		<link 
+		  rel="stylesheet"
+		  href="prism-atom-dark.css"
+		  type="text/css"
+		  media="screen"
+		  />
+
+		<script type="text/javascript" src="prism.js"></script>
+		<script type="text/javascript" src="prism.ruby.js"></script>
+
+		<title>Bob Polacheck</title>
+		<meta name="description" content="Software development has become one of my passions, one that I find great joy and meaning in.  My aim is to solve problems and make beautiful things with code.">
+	</head>
+
+	<body>
+		<div class="about-container">
+		  <ul>
+		    <li><a href="#" class="nav-link">About</a></li>
+		    <li><a href="#code-samples" class="nav-link">Code Samples</a></li>
+		    <li><a href="#web-apps" class="nav-link">Web Apps</a></li>
+		    <li><a href="#skills-and-tools" class="nav-link">Skills &amp; Tools</a></li>
+		    <li class="hire-me"><a href="#hire-me" class="nav-link">Hire Me</a></li>
+		  </ul>
+
+		  <div class="about">
+
+			<img src="me1.png" class="me" />
+
+			<h1>Bob Polacheck</h1>
+			<h2>SOFTWARE ENGINEER</h2>
+			<hr class="grey"/>
+			<p class="bio">
+			Software development has become one of my passions, one that I find great joy and meaning in.  My aim is to solve problems and make beautiful things with code.
+		    </p>
+	    </div>
+	  </div>
+	    <h3 id="code-samples">Code Snippets</h3> 
+	    <hr class="yellow">
+
+	    <div class="box">
+	      <h4>Temperature Conversion</h4>
+	      <p>
+	      	This ruby program will prompt the user for a temperature
+	      	in degrees Celcius and let the user know what the corresponding
+	      	temperature is in Fahrenheit.
+	      </p>
+	    </div>
+	    
+	    <div class="box">
+	    <pre><code class="language-ruby">puts &quot;Please enter degrees in Celcius:&quot;
+celcius = gets.chomp.to_f
+	def convert(celcius)
+  		return celcius * 9/5 + 32
+	end</code></pre>
+	    </div>
+
+	  <br class="clear" />
+
+	  <div class="box">
+	    <pre><code class="language-ruby">puts &quot;Enter a number:&quot;
+number = gets.chomp.to_i
+def convert(number)
+   return number % 10 
+end
+def convert100(number)
+  return number % 100
+end
+if convert(number) == 1 &amp;&amp; convert100(number) 
+!= 11 &amp;&amp; convert100(number) != 12 &amp;&amp; 
+convert100(number) != 13
+  puts &quot;That's the #{number}st item!&quot;
+elsif convert(number) == 2 &amp;&amp; 
+convert100(number) != 11 
+&amp;&amp; convert100(number) != 12 &amp;&amp; 
+convert100(number) != 13
+  puts&quot;That's the #{number}nd item!&quot;
+elsif convert(number) == 3 &amp;&amp; 
+convert100(number) != 11 
+&amp;&amp; convert100(number) != 12 &amp;&amp; 
+convert100(number) != 13
+  puts &quot;That's the #{number}rd item!&quot;
+else
+  puts &quot;That's the #{number}th item!&quot;
+end</code></pre>
+
+
+	  </div>
+
+	  <div class="box">
+	  	<h4>Ordinal Challenge</h4>
+	  	<p>
+	  	  This ruby program will convert a plain number
+	  	  to the ordinal of the number.  So for example,
+	  	  if the user enters 2, it will display 2nd, if
+	  	  the user enters 3, it will display 3rd, etc.
+	  	</p>
+
+	  </div>
+
+	  <br class="clear" />
+	  <div class="box">
+	    <h4>Foobar</h4>
+	    <p>
+	      This ruby program is an adaptation of a classic technical
+	      interview problem which displays sequences 
+	      of the Foobar pattern.
+	    </p>
+	  </div>
+
+	  <div class="box">
+	    <pre><code class="language-ruby">puts &quot;How many digits would you like to see?&quot;
+digits = Array.new(gets.chomp.to_i){|index| index +1}
+def foo(number)
+  return number % 3
+end
+def bar(number)
+  return number % 5
+end
+digits.each do |number|
+   if foo(number) == 0 &amp;&amp; bar(number) == 0
+    puts &quot;Foobar&quot;
+  elsif foo(number) == 0
+   puts &quot;Foo&quot;
+  elsif bar(number) == 0
+    puts &quot;Bar&quot;
+  else
+    puts &quot;#{number}&quot;
+   end
+ end</code></pre>
+	  </div>
+
+	  <br class="clear" />
+
+	  <h3 id="web-apps">Web Apps</h3>
+	  <hr class="yellow" />
+
+	  <div class="box">
+	    <h4>Quote Generator</h4>
+	    <img src="splurty.png" class="full-width" />
+	    <p>
+	    	A database-powered quote generator with a mobile-first
+	    	design, using the Ruby on Rails framework, HTML, and CSS.
+	    	Uses Git and Github for version control, and launched
+	    	on Heroku.
+	    </p>
+	  </div>
+
+	  <div class="box">
+      <h4>Yelp Clone</h4>
+      <img src="nomster.png" class="full-width" />
+      <p>
+        A Yelp clone that integrates with the Google Maps API
+        and includes features like user comments, star ratings,
+        image uploading, and user authentication.
+      </p>
+    </div>
+    <br class="clear" />
+
+    <div class="box">
+      <h4>Two-Sided Market Place</h4>
+      <img src="flixter.png" class="full-width" />
+      <p>
+        A two-sided, video-streaming marketplace platform that
+        features credit card payment capabilities, user role
+        management, complex user interfaces, and advanced
+        database relationships.
+      </p>
+    </div>
+    <div class="box">
+      <h4>Test Driven Development</h4>
+      <img src="grammable.png" class="full-width" />
+      <p>
+        An Instagram clone that was built using industry-standard, test-driven
+        development following numerous red/green/refactor cycles.
+      </p>
+    </div>
+    <br class="clear" />
+    <div class="box">
+      <h4>Single Page Todo Application</h4>
+      <img src="todoster.png" class="full-width" />
+      <p>
+        This single-page to-do application features a
+        fluid user interface that– by using JavaScript–
+        allows users to rapidly add dynamic content.
+      </p>
+    </div>
+    <div class="box">
+      <h4>Agile Team Project</h4>
+      <img src="chess.png" class="full-width" />
+      <p>
+        Worked on an Agile software development team building
+        a chess application. Under the guidance of a senior software engineer,
+        we had weekly Agile team meetings for code reviews, sprint planning,
+        and feature assignments.
+      </p>
+    </div>
+    <br class="clear" />
+    <h3 id="skills-and-tools">Skills &amp; Tools</h3>
+    <hr class="yellow" />
+    <p class="skills-and-tools">
+    	I have developed proficiency and expertise
+    	in the following programming languages and
+    	comfort with the following tools.
+    </p>
+  <div class="icons">
+    <img src="github.png" class="icon" />
+    <img src="rubocop.png" class="icon" />
+    <img src="trello.png" class="icon" />
+    <img src="slack.png" class="icon" />
+    <img src="heroku.png" class="icon" />
+
+    <br class="clear" />
+    <img src="skills.png" class="icon" />
+  </div>
+
+  <div class="contact-me" id="hire-me">
+  	<h3 class="contact-headline">Contact</h3>
+  	<hr class="yellow" />
+  	<p class="contact-info">
+  		Currently entertaining new opportunities.
+  		Please get in touch via email:
+  	</p>
+
+  	<p>
+      <a href="mailto:rpolacheck@gmail.com" class="contact-link">
+        rpolacheck@gmail.com
+      </a>
+    </p>
+  </div>
+	</body>
+
+</html>
